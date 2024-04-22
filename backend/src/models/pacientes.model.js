@@ -5,7 +5,8 @@ const PacientesModel = (sequelize, DataTypes) => {
     contact: DataTypes.STRING,
   },{
     timestamps: false,
-    undescored: true,
+    underscored: true,
+    tableName: 'Pacientes'
   });
 
   return Paciente;

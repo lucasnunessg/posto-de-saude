@@ -1,0 +1,13 @@
+GET http://localhost:3004/pacientes/
+
+###
+
+POST http://localhost:3004/pacientes/
+Content-Type: application/json
+{
+"full_name": "Cristian Pacheco Nunes",
+"address": "Rua Bahia, n 190, Bairro Independencia",
+"contact": "55999982158"
+}
+
+###

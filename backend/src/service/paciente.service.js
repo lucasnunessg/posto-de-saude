@@ -12,8 +12,8 @@ const getById = async (id) => {
   return pacientes
 }
 
-const createPaciente = async (full_name, address, contact) => {
-  const newPaciente = await Paciente.create({ full_name, address, contact });
+const createPaciente = async (fullName, address, contact) => {
+  const newPaciente = await Paciente.create({ fullName, address, contact });
 
   return newPaciente
 };

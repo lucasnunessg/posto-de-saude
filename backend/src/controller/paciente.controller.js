@@ -25,9 +25,9 @@ return res.status(200).json(pacientes)
 const createPaciente = async(req, res) => {
   try {
     const { id } = req.params;
-    const { full_name, address, contact } = req.body;
+    const { fullName, address, contact } = req.body;
 
-    const newPaciente = await pacienteService.createPaciente(id, full_name, address, contact);
+    const newPaciente = await pacienteService.createPaciente(id, fullName, address, contact);
 
     return res.status(201).json(newPaciente);
   }catch(e){
@@ -39,9 +39,9 @@ const createPaciente = async(req, res) => {
 const updatePaciente = async (req, res) => {
   try {
     const { id } = req.params;
-    const { full_name, address, contact } = req.body;
+    const { fullName, address, contact } = req.body;
 
-    const updatePaciente = await pacienteService.updatePaciente(id, full_name, address, contact)
+    const updatePaciente = await pacienteService.updatePaciente(id, fullName, address, contact)
     if (!updatePaciente) return res.status(404).json({ message: 'Erro ao atualizar o paciente' })
     return res.status(200).json({ message: 'Paciente atualizado com sucesso!' })
   }catch(e){

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const pacienteController = require('./controller/paciente.controller');
+const pacienteController = require ('./controller/paciente.controller')
 
 const app = express();
 

@@ -13,7 +13,7 @@ const allMedics = async (_req, res) => {
 const getMedicById = async(req, res) => {
   try {
     const { id } = req.params;
-    const Medicos = medicService.getMedicById(id);
+    const Medicos = await medicService.getMedicById(id);
     if(!Medicos) return res.status(404).json({ message: 'Erro ao achar médico!' })
     return res.status(200).json(Medicos)
   }catch(e){

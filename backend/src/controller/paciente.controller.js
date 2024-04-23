@@ -49,7 +49,7 @@ const updatePaciente = async (req, res) => {
   }
 }
 
-const deletePaciente = async (_req, res) => {
+const deletePaciente = async (req, res) => {
   try {
     const { id } = req.params;
     await pacienteService.deletePaciente(id)

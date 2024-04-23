@@ -24,10 +24,9 @@ return res.status(200).json(pacientes)
 
 const createPaciente = async(req, res) => {
   try {
-    const { id } = req.params;
     const { fullName, address, contact } = req.body;
 
-    const newPaciente = await pacienteService.createPaciente(id, fullName, address, contact);
+    const newPaciente = await pacienteService.createPaciente(fullName, address, contact);
 
     return res.status(201).json(newPaciente);
   }catch(e){

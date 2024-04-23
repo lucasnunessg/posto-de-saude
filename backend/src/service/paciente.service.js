@@ -11,9 +11,10 @@ const getById = async (id) => {
 
   return pacientes
 }
-
-const createPaciente = async (fullName, address, contact) => {
-  const newPaciente = await Paciente.create({ fullName, address, contact });
+/// O JAVASCRIPT SEMPRE LÊ PELA ORDEM, EU NAO PASSEI ID NO SERVICE, 
+/// NAO DEVO PASSAR NO CONTROLLER PRA NAO ALTERAR A ORDEM. CASO PASSE NO SERVICE, TAMBEM PASSAR NO CONTROLLER
+  const createPaciente = async (fullName, address, contact) => {
+  const newPaciente = await Paciente.create({fullName, address, contact });
 
   return newPaciente
 };

@@ -9,6 +9,10 @@ const PacientesModel = (sequelize, DataTypes) => {
     tableName: 'Pacientes'
   });
 
+  Paciente.associate = models => {
+    Paciente.belongsTo(models.Medico, { foreignKey: 'medic_id' });
+  };
+
   return Paciente;
 };
 

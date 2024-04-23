@@ -5,7 +5,11 @@ const MedicosModel = (sequelize, DataTypes) => {
     tableName: 'Medicos',
     underscored: true,
     timestamps: false,
-  })
+  });
+
+  Medico.associate = models => {
+    Medico.hasMany(models.Paciente, { foreignKey: 'medic_id' });
+  };
 
   return Medico;
 };

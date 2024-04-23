@@ -1,6 +1,6 @@
-const { Medico } = require('../models/medicos.model');
+const { Medico } = require('../models/');
 
-const allMedics = async () => {
+const allMedics = async() => {
   const Medicos = await Medico.findAll();
 
   return Medicos

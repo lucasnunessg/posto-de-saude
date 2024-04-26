@@ -1,12 +1,13 @@
-import './App.css'
+import MyHeader from "./components/Header";
 
+function App () {
+return (
 
-  return (
-    <>
-      <div>
-      
-    </>
+  <div>
+  <h1> Posto de Saúde - São Gabriel, RS</h1>
+  <MyHeader />
+  </div>
   )
 }
 
-export default App
+export default App;
